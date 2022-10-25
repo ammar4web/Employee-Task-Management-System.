@@ -20,15 +20,15 @@ export default function Authenticated({ auth, header, children }) {
                                 </Link>
                             </div>
 
-                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <div className="hidden space-x-8 sm:-my-px ltr:sm:ml-10 rtl:sm:mr-10 sm:flex">
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                    Dashboard
+                                    لوحة التحكم
                                 </NavLink>
                             </div>
                         </div>
 
-                        <div className="hidden sm:flex sm:items-center sm:ml-6">
-                            <div className="ml-3 relative">
+                        <div className="hidden sm:flex sm:items-center ltr:sm:ml-6 rtl:sm:mr-6">
+                            <div className="ltr:ml-3 rtl:mr-3 relative">
                                 <Dropdown>
                                     <Dropdown.Trigger>
                                         <span className="inline-flex rounded-md">
@@ -39,7 +39,7 @@ export default function Authenticated({ auth, header, children }) {
                                                 {auth.user.name}
 
                                                 <svg
-                                                    className="ml-2 -mr-0.5 h-4 w-4"
+                                                    className="ltr:ml-2 ltr:-mr-0.5 rtl:mr-2 rtl:-ml-0.5 h-4 w-4"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
