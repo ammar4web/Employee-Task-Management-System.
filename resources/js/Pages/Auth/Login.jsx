@@ -38,13 +38,13 @@ export default function Login({ status, canResetPassword }) {
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel forInput="email" value="Email" />
+                    <InputLabel forInput="email" value="البريد الإلكتروني" />
 
                     <TextInput
                         type="text"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full"
+                        className="mt-2 block w-full"
                         autoComplete="username"
                         isFocused={true}
                         handleChange={onHandleChange}
@@ -54,13 +54,13 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel forInput="password" value="Password" />
+                    <InputLabel forInput="password" value="كلمة السر" />
 
                     <TextInput
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full"
+                        className="mt-2 block w-full"
                         autoComplete="current-password"
                         handleChange={onHandleChange}
                     />
@@ -72,22 +72,22 @@ export default function Login({ status, canResetPassword }) {
                     <label className="flex items-center">
                         <Checkbox name="remember" value={data.remember} handleChange={onHandleChange} />
 
-                        <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                        <span className="ltr:ml-2 rtl:mr-2 text-sm text-gray-600">البقاء قيد تسجيل الدخول</span>
                     </label>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
+                    {/* {canResetPassword && (
                         <Link
                             href={route('password.request')}
                             className="underline text-sm text-gray-600 hover:text-gray-900"
                         >
-                            Forgot your password?
+                            نسيت كلمة المرور
                         </Link>
-                    )}
+                    )} */}
 
                     <PrimaryButton className="ml-4" processing={processing}>
-                        Log in
+                        تسجيل الدخول
                     </PrimaryButton>
                 </div>
             </form>
